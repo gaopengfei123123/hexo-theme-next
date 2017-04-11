@@ -12,14 +12,14 @@
     <div class="custom-logo-site-title">
       <a href="{{ config.root }}"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">{{ config.title }}</span>
+        <span class="site-title">{{ config.title | escape }}</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
       {% if theme.seo %}
-        <h1 class="site-subtitle" itemprop="description">{{ config.subtitle }}</h1>
+        <h1 class="site-subtitle" itemprop="description">{{ config.subtitle | escape }}</h1>
       {% else %}
-        <p class="site-subtitle">{{ config.subtitle }}</p>
+        <p class="site-subtitle">{{ config.subtitle | escape }}</p>
       {% endif %}
   </div>
 
